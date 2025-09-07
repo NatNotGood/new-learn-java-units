@@ -4,6 +4,8 @@ import org.example.second_unit.stationery.Pen;
 import org.example.second_unit.stationery.Pencil;
 import org.example.second_unit.stationery.Stationery;
 
+import java.util.Arrays;
+
 public class Main {
     public static void main(String[] args) {
 //        arrayWithForLoopOnly();
@@ -59,12 +61,12 @@ public class Main {
                 new Pencil("Карандаш", 5.0, "HB"),
                 new Notebook("Блокнот", 20.0, 100)
         };
-        System.out.println("Набор новичка: " + java.util.Arrays.toString(beginnersSet));
+        System.out.printf("Набор новичка: %s%n%n", Arrays.toString(beginnersSet));
         double total = 0.0;
         for (Stationery item : beginnersSet) {
             total += item.getCost();
         }
-        System.out.println("Общая стоимость набора: " + total);
+        System.out.printf("Общая стоимость набора: %s%n%n", total);
 
         MessengerService messenger = new TelegramMessenger();
         ClientMessenger user = new ClientMessenger(messenger);

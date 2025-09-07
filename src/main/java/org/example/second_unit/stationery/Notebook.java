@@ -19,6 +19,6 @@ public class Notebook extends Stationery{
     }
     @Override
     public String toString() {
-        return "Notebook: name='" + getName() + "', cost=" + getCost() + ", pages=" + pages + "";
+        return String.format("Notebook: name='%s', cost='%s', pages='%s'", getName(), getCost(), pages);
     }
 }

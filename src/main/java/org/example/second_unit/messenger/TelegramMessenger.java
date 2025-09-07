@@ -6,12 +6,12 @@ public class TelegramMessenger implements MessengerService{
     @Override
     public void sendMessage(String message) {
         this.message = message;
-        System.out.println("Telegram: отправка сообщения \"" + message + "\"");
+        System.out.printf("Telegram: отправка сообщения \"%s\"%n", message);
     }
     @Override
     public String readMessage() {
         if (message != null) {
-            return "Telegram: получено новое сообщение (ответ на \"" + message + "\")";
+            return String.format("Telegram: чтение сообщения \"%s\"%n", message);
         } else {
             return "Telegram: нет новых сообщений";
         }

@@ -5,12 +5,12 @@ public class WhatsAppMessenger implements MessengerService{
     @Override
     public void sendMessage(String message) {
         this.message = message;
-        System.out.println("WhatsApp: отправка сообщения \"" + message + "\"");
+        System.out.printf("WhatsApp: отправка сообщения \"%s\"%n", message);
     }
     @Override
     public String readMessage() {
         if (message != null) {
-            return "WhatsApp: новое сообщение (\"" + message + "\")";
+            return String.format("WhatsApp: чтение сообщения \"%s\"%n", message);
         } else {
             return "WhatsApp: нет новых сообщений";
         }

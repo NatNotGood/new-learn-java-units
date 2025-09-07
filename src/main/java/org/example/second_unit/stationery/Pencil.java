@@ -21,6 +21,6 @@ public class Pencil extends Stationery{
     }
     @Override
     public String toString() {
-        return "Pencil: name='" + getName() + "', cost=" + getCost() + ", hardness='" + hardness + "'";
+        return String.format("Pencil: name='%s', cost='%s', hardness='%s'", getName(), getCost(), hardness);
     }
 }

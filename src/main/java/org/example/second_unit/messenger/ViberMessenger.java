@@ -5,12 +5,12 @@ public class ViberMessenger implements MessengerService{
     @Override
     public void sendMessage(String message) {
         this.message = message;
-        System.out.println("Viber: отправка сообщения \"" + message + "\"");
+        System.out.printf("Viber: отправка сообщения \"%s\"%n", message);
     }
     @Override
     public String readMessage() {
         if (message != null) {
-            return "Viber: вы читаете последнее сообщение \"" + message + "\"";
+            return String.format("Viber: вы читаете последнее сообщение \"%s\"%n", message);
         } else {
             return "Viber: новых сообщений нет";
         }

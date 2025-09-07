@@ -14,12 +14,6 @@ public class Stationery {
     public void setCost(double cost) {
         this.cost = cost;
     }
-    public void setCost(int cost) {
-        this.setCost((double) cost);
-    }
-    public void setCost(long cost) {
-        this.setCost((double) cost);
-    }
 
     public double getCost() {
         return cost;
@@ -44,6 +38,6 @@ public class Stationery {
 
     @Override
     public String toString() {
-        return "Stationery: name='" + name + "', cost=" + cost + "";
+        return String.format("Stationery: name='%s', cost='%s'", name, cost);
     }
 }

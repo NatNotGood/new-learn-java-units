@@ -39,6 +39,6 @@ public class Employee {
 
     @Override
     public String toString() {
-        return "Employee: name='" + name + "', supplies='" + supplies + "'";
+        return String.format("Employee: name='%s', supplies='%s'", name, supplies);
     }
 }
