@@ -10,7 +10,9 @@ public class Pencil extends Stationery{
     }
     @Override
     public boolean equals(Object o) {
-        if (!super.equals(o)) return false;
+        //вызовется метод equals суперкласса, который по умоллчанию сравнивает ссылки на объекты
+//        if (!super.equals(o)) return false;
+        //явное сравнение классов. Если классы не равны, то объекты не равны
         if (getClass() != o.getClass()) return false;
         Pencil pencil = (Pencil) o;
         return Objects.equals(hardness, pencil.hardness);

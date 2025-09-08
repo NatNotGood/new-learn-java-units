@@ -6,6 +6,7 @@ import java.util.List;
 public class Employee {
     private String name;
     private List<Stationery> supplies = new ArrayList<>();
+    private String password;
 
     public Employee(String name) {
         this.name = name;
@@ -21,6 +22,18 @@ public class Employee {
             total += item.getCost();
         }
         return total;
+    }
+
+    // Инкапсулированный доступ к данным через методы
+    public String getName() {
+        return name;
+    }
+    public void setName(String name) {
+         this.name = name;
+    }
+    //сокрытие, так как поле password не используется напрямую, управлять можно только через методы
+    public void setPassword(String password) {
+        this.password = password;
     }
 
     @Override

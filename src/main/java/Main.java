@@ -1,3 +1,6 @@
+import org.example.second_unit.additional_exercises.MultifunctionDevice;
+import org.example.second_unit.additional_exercises.Printer;
+import org.example.second_unit.additional_exercises.Scanner;
 import org.example.second_unit.messenger.*;
 import org.example.second_unit.stationery.Notebook;
 import org.example.second_unit.stationery.Pen;
@@ -56,30 +59,46 @@ public class Main {
 //        System.out.println("Общая стоимость: " + employee.getTotalSuppliesCost());
 
 
-        Stationery[] beginnersSet = {
-                new Pen("Ручка", 10.5, "синяя"),
-                new Pencil("Карандаш", 5.0, "HB"),
-                new Notebook("Блокнот", 20.0, 100)
-        };
-        System.out.printf("Набор новичка: %s%n%n", Arrays.toString(beginnersSet));
-        double total = 0.0;
-        for (Stationery item : beginnersSet) {
-            total += item.getCost();
-        }
-        System.out.printf("Общая стоимость набора: %s%n%n", total);
+//        Stationery[] beginnersSet = {
+//                new Pen("Ручка", 10.5, "синяя"),
+//                new Pencil("Карандаш", 5.0, "HB"),
+//                new Notebook("Блокнот", 20.0, 100)
+//        };
+//        System.out.printf("Набор новичка: %s%n%n", Arrays.toString(beginnersSet));
+//        double total = 0.0;
+//        for (Stationery item : beginnersSet) {
+//            total += item.getCost();
+//        }
+//        System.out.printf("Общая стоимость набора: %s%n%n", total);
+//
+//        MessengerService messenger = new TelegramMessenger();
+//        ClientMessenger user = new ClientMessenger(messenger);
+//        user.sendMessage("Привет, че кого");
+//        user.readMessages();
+//
+//        user.setMessenger(new WhatsAppMessenger());
+//        user.sendMessage("Хочу поговорить");
+//        user.readMessages();
+//
+//        user.setMessenger(new ViberMessenger());
+//        user.sendMessage("Хочу поговорить еще раз");
+//        user.readMessages();
 
-        MessengerService messenger = new TelegramMessenger();
-        ClientMessenger user = new ClientMessenger(messenger);
-        user.sendMessage("Привет, че кого");
-        user.readMessages();
+        Scanner scanner = new MultifunctionDevice();
+        scanner.print();
+        Printer printer = new MultifunctionDevice();
+        printer.print();
 
-        user.setMessenger(new WhatsAppMessenger());
-        user.sendMessage("Хочу поговорить");
-        user.readMessages();
+        Pen bluePen = new Pen("Ручка", 10.5, "синяя");
+        Pen redPen = new Pen("Ручка", 10.5, "красная");
+        Pencil hbPencil = new Pencil("Карандаш", 5.0, "HB");
+        Pencil h1Pencil = new Pencil("Карандаш", 8.0, "H1");
+        boolean res1 = bluePen.equals(redPen);
+        boolean res2 = hbPencil.equals(h1Pencil);
+        boolean res3 = bluePen.equals(hbPencil);
 
-        user.setMessenger(new ViberMessenger());
-        user.sendMessage("Хочу поговорить еще раз");
-        user.readMessages();
-
+        System.out.println(res1);
+        System.out.println(res2);
+        System.out.println(res3);
     }
 }
