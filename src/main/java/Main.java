@@ -1,6 +1,4 @@
-import org.example.second_unit.additional_exercises.MultifunctionDevice;
-import org.example.second_unit.additional_exercises.Printer;
-import org.example.second_unit.additional_exercises.Scanner;
+import org.example.second_unit.additional_exercises.*;
 import org.example.second_unit.messenger.*;
 import org.example.second_unit.stationery.Notebook;
 import org.example.second_unit.stationery.Pen;
@@ -84,21 +82,25 @@ public class Main {
 //        user.sendMessage("Хочу поговорить еще раз");
 //        user.readMessages();
 
-        Scanner scanner = new MultifunctionDevice();
-        scanner.print();
-        Printer printer = new MultifunctionDevice();
-        printer.print();
+//        Scanner scanner = new MultifunctionDevice();
+//        scanner.print();
+//        Printer printer = new MultifunctionDevice();
+//        printer.print();
+//
+//        Pen bluePen = new Pen("Ручка", 10.5, "синяя");
+//        Pen redPen = new Pen("Ручка", 10.5, "красная");
+//        Pencil hbPencil = new Pencil("Карандаш", 5.0, "HB");
+//        Pencil h1Pencil = new Pencil("Карандаш", 8.0, "H1");
+//        boolean res1 = bluePen.equals(redPen);
+//        boolean res2 = hbPencil.equals(h1Pencil);
+//        boolean res3 = bluePen.equals(hbPencil);
+//
+//        System.out.println(res1);
+//        System.out.println(res2);
+//        System.out.println(res3);
 
-        Pen bluePen = new Pen("Ручка", 10.5, "синяя");
-        Pen redPen = new Pen("Ручка", 10.5, "красная");
-        Pencil hbPencil = new Pencil("Карандаш", 5.0, "HB");
-        Pencil h1Pencil = new Pencil("Карандаш", 8.0, "H1");
-        boolean res1 = bluePen.equals(redPen);
-        boolean res2 = hbPencil.equals(h1Pencil);
-        boolean res3 = bluePen.equals(hbPencil);
-
-        System.out.println(res1);
-        System.out.println(res2);
-        System.out.println(res3);
+        //вызывается конструктор родителя без параметров, хотя явно в дочернем он не указан. После родительского контруктора вызывается конструктор дочернего.
+        new Fax();
+        new Child();
     }
 }
